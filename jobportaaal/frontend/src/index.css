@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 m-0 font-sans antialiased;
+    background-image: radial-gradient(circle at top right, #e0e7ff, transparent 400px), 
+                      radial-gradient(circle at bottom left, #fce7f3, transparent 400px);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-secondary hover:from-primary-dark hover:to-secondary-dark text-white font-medium py-2.5 px-6 rounded-xl shadow-[0_4px_14px_0_rgba(79,70,229,0.39)] hover:shadow-[0_6px_20px_rgba(79,70,229,0.23)] hover:-translate-y-0.5 transition-all duration-300;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 bg-white/70 backdrop-blur-sm border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all duration-300 shadow-sm hover:border-slate-300;
+  }
+  
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-lg shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/60 rounded-2xl;
+  }
+}
